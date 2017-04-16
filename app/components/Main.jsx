@@ -16,17 +16,29 @@ export default class Main extends React.Component {
         let oldNumber = this.state.number.split('');
         oldNumber[decimal] = digit;
         let newNumber = oldNumber.join("");
+
         this.setState({
             number: newNumber
         });
+
         console.log(newNumber);
     }
     
     render() {
         return (
-            <div>
-                <div>{this.state.number}</div>
-                <Form1 handleChange = {this.handlePhoneNumber.bind(this)} number = {this.state.number} />
+            <div id = "main">
+                <div id = "title">
+                    Dumb Phone Forms
+                </div>
+                <div id = "form_container" >
+                    <div id = "phone_number" >
+                        {this.state.number}
+                    </div>
+                    <Form1
+                        handleChange = { this.handlePhoneNumber.bind(this) }
+                        number = { this.state.number }
+                    />
+                </div>
             </div>
         )
     }

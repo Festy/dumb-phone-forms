@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Styles from './styles/app.css';
+import './styles/app.css';
 import Main from './components/Main.jsx'
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize.min';
+
 
 class App extends React.Component {
+
     render () {
         return (
             <div>

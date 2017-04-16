@@ -42,6 +42,10 @@ module.exports = {
                 options: {
                     name: './images/[name].[ext]',
                 }
+            },
+            {
+                test: /.(woff|woff2)$/,
+                loader:"url-loader?prefix=font/&limit=5000"
             }
         ]
     },

@@ -1,3 +1,45 @@
+html,
 body {
-    background-color: #888888;
+    height: 100%;
+    margin: 0;
+    background-color: #E5DCC5;
+}
+
+[data-reactroot],
+#root,
+#main,
+#form_container {
+    height: 100%;
+}
+
+#form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    position: absolute;
+    margin: 50px auto;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    color: #4C4C47;
+    font-weight: 300;
+}
+
+#phone_number {
+    font-size: 50px;
+    color: #C14953;
+}
+
+#form_div {
+    display: flex;
+    flex-direction: row;
+}
+
+#form_div select{
+    width: 50px;
+    margin-right: 5px;
 }
