@@ -1,5 +1,5 @@
 import React from 'react';
-import Form1 from './forms/Form1.jsx';
+import Form from './forms/Form2.jsx';
 
 export default class Main extends React.Component {
 
@@ -10,18 +10,10 @@ export default class Main extends React.Component {
         }
     }
     
-    handlePhoneNumber(formNo, event) {
-        let decimal = formNo;
-        let digit = event.target.value;
-        let oldNumber = this.state.number.split('');
-        oldNumber[decimal] = digit;
-        let newNumber = oldNumber.join("");
-
+    handlePhoneNumber(phoneNo) {
         this.setState({
-            number: newNumber
-        });
-
-        console.log(newNumber);
+            number: phoneNo
+        })
     }
     
     render() {
@@ -34,8 +26,8 @@ export default class Main extends React.Component {
                     <div id = "phone_number" >
                         {this.state.number}
                     </div>
-                    <Form1
-                        handleChange = { this.handlePhoneNumber.bind(this) }
+                    <Form
+                        handlePhoneNumber = { this.handlePhoneNumber.bind(this) }
                         number = { this.state.number }
                     />
                 </div>

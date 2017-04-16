@@ -1,10 +1,22 @@
 import React from 'react';
-import $ from 'jquery';
 
 export default class Form1 extends React.Component {
 
     constructor () {
         super();
+
+    }
+
+    handleInput (formNo, event) {
+        let decimal = formNo;
+        let digit = event.target.value;
+        let oldNumber = this.props.number.split('');
+        oldNumber[decimal] = digit;
+        let newNumber = oldNumber.join("");
+
+        this.props.handlePhoneNumber(newNumber);
+
+        console.log(newNumber);
     }
 
     createOptions() {
@@ -27,7 +39,7 @@ export default class Form1 extends React.Component {
                     <select
                         className="browser-default"
                         value = {this.props.number[i]}
-                        onChange={this.props.handleChange.bind(this, i)} >
+                        onChange={this.handleInput.bind(this, i)} >
                         {this.createOptions()}
                     </select>
                 </div>
