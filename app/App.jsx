@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Styles from './styles/app.css';
-import catImage from './assets/images/cat.jpg'
+import Main from './components/Main.jsx'
 
 class App extends React.Component {
     render () {
         return (
             <div>
-                Hi!
-                <img src={catImage}></img>
+                <Main />
             </div>
         )
     }
