@@ -4,7 +4,6 @@ export default class Form1 extends React.Component {
 
     constructor () {
         super();
-
     }
 
     handleInput (formNo, event) {
