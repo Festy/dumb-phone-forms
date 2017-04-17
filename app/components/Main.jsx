@@ -1,6 +1,7 @@
 import React from 'react';
 import Form1 from './forms/Form1.jsx';
 import Form2 from './forms/Form2.jsx';
+import Form3 from './forms/Form3.jsx';
 
 export default class Main extends React.Component {
 
@@ -9,7 +10,7 @@ export default class Main extends React.Component {
         this.state = {
             number : "0000000000",
             formNumber: 1,
-            totalForms: 2
+            totalForms: 3
         };
     }
 
@@ -40,6 +41,8 @@ export default class Main extends React.Component {
                 return <Form1 {...props} />;
             case 2:
                 return <Form2 {...props} />;
+            case 3:
+                return <Form3 {...props} />;
             default:
                 return <div> Done! </div>
         }
