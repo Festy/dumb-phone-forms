@@ -86,6 +86,9 @@ export default class Main extends React.Component {
                         <a id = "next"
                            className = {"btn btn-large waves-effect waves-light " + ((this.state.formNumber === this.state.totalForms) ? "disabled" : "") }
                            onClick= {this.handleNext.bind(this)}>next</a>
+                        <a id = "clear"
+                           className = {"btn btn-large waves-effect waves-light " + ((this.state.number === "0000000000") ? "disabled" : "") }
+                           onClick= {this.handlePhoneNumber.bind(this, "0000000000")}>clear</a>
                     </div>
                 </div>
             </div>
