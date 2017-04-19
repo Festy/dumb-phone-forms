@@ -59,3 +59,149 @@ body {
 #test5 {
     width: 1000px;
 }
+
+.ball {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+#ball0 {
+    animation: moveX0 3s linear 0s infinite alternate, moveY0 3.4s linear 0s infinite alternate;
+    animation-delay: -5s;
+}
+
+
+@keyframes moveX0 {
+    from { left: 0; } to { left: 450px; }
+}
+
+@keyframes moveY0 {
+    from { top: 0; } to { top: 350px; }
+}
+
+
+
+#ball1 {
+    animation: moveX1 2.1s linear 0s infinite alternate, moveY1 2s linear 0s infinite alternate;
+    animation-delay: -3s;
+}
+
+@keyframes moveX1 {
+    from { left: -50px; } to { left: 400px; }
+}
+
+@keyframes moveY1 {
+    from { top: 0; } to { top: 350px; }
+}
+
+
+#ball2 {
+    animation: moveX2 3.5s linear 0s infinite alternate, moveY2 3.7s linear 0s infinite alternate;
+    animation-delay: -1s;
+}
+
+@keyframes moveX2 {
+    from { left: -100px; } to { left: 350px; }
+}
+
+@keyframes moveY2 {
+    from { top: 0; } to { top: 350px; }
+}
+
+#ball3 {
+    animation: moveX3 1s linear 0s infinite alternate, moveY3 2.1s linear 0s infinite alternate;
+    animation-delay: -3s;
+}
+
+@keyframes moveX3 {
+    from { left: -150px; } to { left: 300px; }
+}
+
+@keyframes moveY3 {
+    from { top: 350px; } to { top: 0px; }
+}
+
+#ball4 {
+    animation: moveX4 5s linear 0s infinite alternate, moveY4 8.1s linear 0s infinite alternate;
+    animation-delay: -5s;
+}
+
+@keyframes moveX4 {
+    from { left: 250px; } to { left: -200px; }
+}
+
+@keyframes moveY4 {
+    from { top: 0px; } to { top: 350px; }
+}
+
+#ball5 {
+    animation: moveX5 2s linear 0s infinite alternate, moveY5 15s linear 0s infinite alternate;
+    animation-delay: -3s;
+}
+
+@keyframes moveX5 {
+    from { left: -250px; } to { left: 200px; }
+}
+
+@keyframes moveY5 {
+    from { top: 0px; } to { top: 350px; }
+}
+
+#ball6 {
+    animation: moveX6 7s linear 0s infinite alternate, moveY6 15s linear 0s infinite alternate;
+    animation-delay: -1s;
+}
+
+@keyframes moveX6 {
+    from { left: -300px; } to { left: 150px; }
+}
+
+@keyframes moveY6 {
+    from { top: 0px; } to { top: 350px; }
+}
+
+#ball7 {
+    animation: moveX7 10s linear 0s infinite alternate, moveY7 1.1s linear 0s infinite alternate;
+    animation-delay: -6s;
+}
+
+@keyframes moveX7 {
+    from { left: -350px; } to { left: 100px; }
+}
+
+@keyframes moveY7 {
+    from { top: 0px; } to { top: 350px; }
+}
+
+#ball8 {
+    animation: moveX8 3s linear 0s infinite alternate, moveY8 3.07s linear 0s infinite alternate;
+    animation-delay: -2.8s;
+}
+
+@keyframes moveX8 {
+    from { left: -400px; } to { left: 50px; }
+}
+
+@keyframes moveY8 {
+    from { top: 0px; } to { top: 350px; }
+}
+
+#ball9 {
+    animation: moveX9 1s linear 0s infinite alternate, moveY8 1.07s linear 0s infinite alternate;
+    animation-delay: -2.1s;
+}
+
+@keyframes moveX9 {
+    from { left: -450px; } to { left: 00px; }
+}
+
+@keyframes moveY9 {
+    from { top: 0px; } to { top: 350px; }
+}
+
+#ball_container {
+    background-color: #00acc1;
+    width: 500px;
+    height: 400px;
+    position: relative;
+}

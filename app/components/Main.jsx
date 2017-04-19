@@ -2,30 +2,41 @@ import React from 'react';
 import Form1 from './forms/Form1.jsx';
 import Form2 from './forms/Form2.jsx';
 import Form3 from './forms/Form3.jsx';
+import Form4 from './forms/Form4.jsx';
 
 export default class Main extends React.Component {
 
     constructor () {
         super();
+
+        let totalForms = 4;
+        let prevFormNumber = parseInt(window.localStorage.getItem('formNumber'));
+        let currentFormNumber = (prevFormNumber && prevFormNumber <= totalForms) ? prevFormNumber : 1;
+
         this.state = {
             number : "0000000000",
-            formNumber: 1,
-            totalForms: 3
+            formNumber: currentFormNumber,
+            totalForms: totalForms
         };
+        window.localStorage.setItem('formNumber', currentFormNumber);
     }
 
     handleNext() {
+        let newState = this.state.formNumber + 1;
         this.setState({
             number: "0000000000",
-            formNumber: this.state.formNumber + 1
+            formNumber: newState
         });
+        window.localStorage.setItem('formNumber', newState);
     }
 
     handlePrev() {
+        let newState = this.state.formNumber - 1;
         this.setState({
             number: "0000000000",
-            formNumber: this.state.formNumber - 1
+            formNumber: newState
         });
+        window.localStorage.setItem('formNumber', newState);
     }
 
     getForm () {
@@ -43,6 +54,8 @@ export default class Main extends React.Component {
                 return <Form2 {...props} />;
             case 3:
                 return <Form3 {...props} />;
+            case 4:
+                return <Form4 {...props} />;
             default:
                 return <div> Done! </div>
         }
